@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
-from database import SessionLocal, engine
-import models
-from crud import calculate_pph
+from app.database import SessionLocal, engine
+import app.models as models
+from app.crud import calculate_pph
 
 models.Base.metadata.create_all(bind=engine)
 
