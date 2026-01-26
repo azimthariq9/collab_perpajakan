@@ -8,3 +8,6 @@ def calculate_pph(db: Session, income: float):
         return 0
 
     return income * rules.rate
+
+def get_tax_rules(db: Session):
+    return db.execute("SELECT * FROM tax_rules").fetchall()
