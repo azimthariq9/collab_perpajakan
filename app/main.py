@@ -28,3 +28,6 @@ def calculate_tax(employee_id: int, db: Session = Depends(get_db)):
     rules = db.query(models.TaxRule).all()
     tax = calculate_pph(emp.salary, rules)
     return {"nama": emp.name, "pph": tax}
+@app.get("/")
+def root():
+    return {"message": "Tax Service Online"}

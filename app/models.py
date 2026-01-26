@@ -7,6 +7,7 @@ class Employee(Base):
     name = Column(String, nullable=False)
     npwp = Column(String, nullable=False)
     salary = Column(Float, nullable=False)
+    status = Column(Integer, nullable=False default 1)
 
 class TaxRule(Base):
     __tablename__ = "tax_rules"
@@ -14,3 +15,4 @@ class TaxRule(Base):
     min_income = Column(Float)
     max_income = Column(Float)
     rate = Column(Float)
+    status = Column(Integer, nullable=False default 1)

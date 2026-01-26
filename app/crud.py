@@ -5,3 +5,5 @@ def calculate_pph(salary, rules):
             taxable = min(salary, rule.max_income) - rule.min_income
             tax += taxable * rule.rate
     return tax
+def index():
+    return "tax service online"
